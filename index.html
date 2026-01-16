@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCR Detailing | Expert du Lavage Auto à Domicile</title>
+    
+    <meta name="description" content="Service de detailing automobile premium à domicile. Nettoyage intérieur et extérieur.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            black: '#050505',
+                            surface: '#121212',
+                            accent: '#3b82f6',
+                            gold: '#D4AF37',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #050505; color: #ffffff; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-nav { background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .bg-gradient-hero { background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent); }
+        /* Anti-Spam Honeypot */
+        .hidden-field { display: none !important; visibility: hidden; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg shadow-white/5">
+                    <span class="text-black font-black text-xs">SCR</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight">Detailing<span class="text-brand-accent">.</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Nos Services</a>
+                <a href="#diagnostic" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Diagnostic</a>
+                <a href="#avis" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Avis</a>
+                <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-xl shadow-white/5">
+                    Réserver
+                </a>
+            </div>
+
+            <button onclick="toggleMenu()" class="md:hidden text-white"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-white/10 absolute w-full px-6 py-8 space-y-4 animate-in slide-in-from-top">
+            <a href="#services" onclick="toggleMenu()" class="block text-lg font-medium">Nos Formules</a>
+            <a href="#diagnostic" onclick="toggleMenu()" class="block text-lg font-medium">Diagnostic</a>
+            <a href="#contact" onclick="toggleMenu()" class="block w-full text-center bg-brand-accent py-4 rounded-xl font-bold">Prendre RDV</a>
+        </div>
+    </nav>
+
+    <section id="accueil" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-hero">
+        <div class="absolute inset-0 -z-10">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2070&auto=format&fit=crop" alt="Lavage auto de luxe" class="w-full h-full object-cover opacity-20 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+            <div class="max-w-3xl space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Intervention à domicile 7j/7</span>
+                </div>
+
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9]">
+                    L'éclat du neuf <br>
+                    <span class="text-gray-500">chez vous.</span>
+                </h1>
+                
+                <p class="text-xl text-gray-400 max-w-xl leading-relaxed font-light">
+                    Oubliez les stations de lavage qui rayent votre peinture. SCR Detailing propose un soin haute-couture pour votre véhicule.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#contact" class="bg-brand-accent hover:bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-center transition-all shadow-2xl shadow-blue-500/20">
+                        Prendre rendez-vous
+                    </a>
+                    <a href="#services" class="glass-card hover:bg-white/5 text-white px-10 py-5 rounded-2xl font-bold text-center transition-all">
+                        Voir les tarifs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostic" class="py-32 bg-brand-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass-card p-10 rounded-[2.5rem] relative overflow-hidden">
+                <div id="step-1" class="space-y-8">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold mb-2">Diagnostic Express</h2>
+                        <p class="text-gray-500">Trouvez la formule adaptée en 2 clics.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="runDiag('standard')" class="p-8 rounded-3xl border border-white/10 hover:border-brand-accent hover:bg-brand-accent/5 transition-all group text-left">
+                            <i class="fa-regular fa-star text-3xl text-gray-600 group-hover:text-brand-accent mb-4 block"></i>
+                            <span class="block font-bold text-lg">Entretien Classique</span>
+                            <span class="text-sm text-gray-500">Poussière, usage quotidien, vitres sales.</span>
+                        </button>
+                        <button onclick="runDiag('deep')" class="p-8 rounded-3xl border border-white/10 hover:border-brand-accent hover:bg-brand-accent/5 transition-all group text-left">
+                            <i class="fa-solid fa-wand-sparkles text-3xl text-gray-600 group-hover:text-brand-accent mb-4 block"></i>
+                            <span class="block font-bold text-lg">Gros Nettoyage</span>
+                            <span class="text-sm text-gray-500">Taches sur sièges, poils d'animaux, boue.</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="diag-result" class="hidden text-center space-y-6 animate-in fade-in zoom-in">
+                    <div class="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-check text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold">Formule recommandée : <span id="res-name" class="text-brand-accent"></span></h3>
+                    <p id="res-desc" class="text-gray-400 max-w-sm mx-auto"></p>
+                    <div class="flex flex-col items-center gap-4">
+                        <a href="#services" class="bg-white text-black font-bold px-12 py-4 rounded-2xl">Découvrir l'offre</a>
+                        <button onclick="location.reload()" class="text-xs text-gray-600 underline">Recommencer le test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold">Nos Offres.</h2>
+                <div class="flex flex-wrap justify-center gap-6 pt-4">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" id="suv-check" onchange="calc()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors">SUV / Berline (+10€)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" id="hair-check" onchange="calc()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors">Poils d'animaux (+15€)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="glass-card p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-white/20 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <h3 class="text-2xl font-bold">Pack <span class="text-brand-gold">Gold</span></h3>
+                            <div class="text-4xl font-black"><span class="price-val" data-base="50">50</span>€</div>
+                        </div>
+                        <ul class="space-y-4 text-gray-400 mb-12">
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Aspiration Habitacle & Coffre</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage des Plastiques</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Vitrages Intérieurs</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Parfum de finition</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" onclick="selectForm('Gold')" class="w-full py-4 bg-white/5 rounded-2xl text-center font-bold hover:bg-white hover:text-black transition-all">Choisir Gold</a>
+                </div>
+
+                <div class="relative rounded-[2.5rem] p-10 bg-gradient-to-b from-brand-accent/20 to-transparent border border-brand-accent/30 flex flex-col justify-between">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[10px] font-black px-4 py-1 rounded-full tracking-widest uppercase">Plus Populaire</div>
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <h3 class="text-2xl font-bold text-white">Pack <span class="text-brand-accent">Platinum</span></h3>
+                            <div class="text-4xl font-black text-white"><span class="price-val" data-base="100">100</span>€</div>
+                        </div>
+                        <ul class="space-y-4 text-gray-200 mb-12">
+                            <li class="font-bold text-brand-accent italic mb-6">Tout le pack Gold +</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Shampouinage des Sièges</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage Moquettes & Tapis</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Contours de portes</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Dressing Plastiques UV</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" onclick="selectForm('Platinum')" class="w-full py-4 bg-brand-accent rounded-2xl text-center font-bold hover:scale-[1.02] transition-all shadow-xl shadow-brand-accent/20">Choisir Platinum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20">
+            <div class="space-y-8">
+                <h2 class="text-5xl font-extrabold tracking-tight">Réservez votre <br><span class="text-brand-accent">intervention.</span></h2>
+                <p class="text-gray-400 text-lg">Choisissez votre méthode préférée. Nous répondons en moins d'une heure.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <div class="p-6 glass-card rounded-2xl">
+                        <i class="fa-solid fa-phone text-brand-accent mb-4 block text-xl"></i>
+                        <span class="text-gray-500 text-xs uppercase font-bold tracking-widest">Appel / SMS</span>
+                        <a href="tel:0749507140" class="block text-lg font-bold mt-1">07 49 50 71 40</a>
+                    </div>
+                    <div class="p-6 glass-card rounded-2xl">
+                        <i class="fa-brands fa-instagram text-brand-accent mb-4 block text-xl"></i>
+                        <span class="text-gray-500 text-xs uppercase font-bold tracking-widest">Instagram</span>
+                        <a href="https://instagram.com/scr.detailing" target="_blank" class="block text-lg font-bold mt-1">@scr.detailing</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-[2.5rem] bg-brand-surface relative">
+                <div class="flex p-1.5 bg-brand-black rounded-2xl mb-8 border border-white/5">
+                    <button onclick="setTab('msg')" id="tab-msg" class="flex-1 py-3 rounded-xl text-sm font-bold bg-brand-accent text-white transition-all">Message</button>
+                    <button onclick="setTab('cal')" id="tab-cal" class="flex-1 py-3 rounded-xl text-sm font-bold text-gray-500 transition-all">Calendrier</button>
+                </div>
+
+                <form id="main-form" class="space-y-5" onsubmit="sendForm(event)">
+                    <input type="text" name="_honey" class="hidden-field">
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" name="nom" placeholder="Nom" required class="w-full bg-brand-black border border-white/10 rounded-xl px-5 py-4 focus:border-brand-accent outline-none">
+                        <input type="tel" name="tel" placeholder="Téléphone" required class="w-full bg-brand-black border border-white/10 rounded-xl px-5 py-4 focus:border-brand-accent outline-none">
+                    </div>
+                    <input type="text" name="adresse" placeholder="Adresse d'intervention (Ville)" required class="w-full bg-brand-black border border-white/10 rounded-xl px-5 py-4 focus:border-brand-accent outline-none">
+                    <select id="form-service" name="service" class="w-full bg-brand-black border border-white/10 rounded-xl px-5 py-4 focus:border-brand-accent outline-none appearance-none">
+                        <option value="Gold">Formule GOLD</option>
+                        <option value="Platinum">Formule PLATINUM</option>
+                        <option value="Autre">Autre demande</option>
+                    </select>
+                    <textarea name="details" rows="3" placeholder="Modèle voiture, état particulier..." class="w-full bg-brand-black border border-white/10 rounded-xl px-5 py-4 focus:border-brand-accent outline-none"></textarea>
+                    
+                    <button type="submit" id="form-btn" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-gray-200 transition-all">ENVOYER LA DEMANDE</button>
+                </form>
+
+                <div id="cal-container" class="hidden animate-in fade-in duration-500">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/VOTRE_LIEN_ICI" style="min-width:320px;height:500px;"></div>
+                </div>
+
+                <div id="success-msg" class="hidden text-center py-20 space-y-4">
+                    <div class="text-5xl text-green-500">✓</div>
+                    <h3 class="text-2xl font-bold">Demande envoyée !</h3>
+                    <p class="text-gray-500">On vous rappelle dans quelques instants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        <p>© 2026 SCR Detailing - Service Professionnel à Domicile</p>
+    </footer>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        // Menu Mobile
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Diagnostic
+        function runDiag(type) {
+            document.getElementById('step-1').classList.add('hidden');
+            const res = document.getElementById('diag-result');
+            const name = document.getElementById('res-name');
+            const desc = document.getElementById('res-desc');
+            res.classList.remove('hidden');
+
+            if(type === 'standard') {
+                name.innerText = 'GOLD';
+                desc.innerText = 'Parfait pour un entretien périodique et redonner un coup de propre à l\'habitacle.';
+            } else {
+                name.innerText = 'PLATINUM';
+                name.className = 'text-brand-accent';
+                desc.innerText = 'Nécessaire pour les véhicules très sales ou nécessitant un shampouinage complet des sièges.';
+            }
+        }
+
+        // Calculateur de prix
+        function calc() {
+            const isSuv = document.getElementById('suv-check').checked;
+            const isHair = document.getElementById('hair-check').checked;
+            let bonus = 0;
+            if(isSuv) bonus += 10;
+            if(isHair) bonus += 15;
+
+            document.querySelectorAll('.price-val').forEach(el => {
+                const base = parseInt(el.dataset.base);
+                el.innerText = base + bonus;
+            });
+        }
+
+        // Tabs Message / Calendrier
+        function setTab(mode) {
+            const tMsg = document.getElementById('tab-msg');
+            const tCal = document.getElementById('tab-cal');
+            const fMsg = document.getElementById('main-form');
+            const fCal = document.getElementById('cal-container');
+
+            if(mode === 'cal') {
+                tCal.className = 'flex-1 py-3 rounded-xl text-sm font-bold bg-brand-accent text-white';
+                tMsg.className = 'flex-1 py-3 rounded-xl text-sm font-bold text-gray-500';
+                fMsg.classList.add('hidden');
+                fCal.classList.remove('hidden');
+            } else {
+                tMsg.className = 'flex-1 py-3 rounded-xl text-sm font-bold bg-brand-accent text-white';
+                tCal.className = 'flex-1 py-3 rounded-xl text-sm font-bold text-gray-500';
+                fCal.classList.add('hidden');
+                fMsg.classList.remove('hidden');
+            }
+        }
+
+        function selectForm(service) {
+            document.getElementById('form-service').value = service;
+            setTab('msg');
+            document.getElementById('contact').scrollIntoView();
+        }
+
+        // Envoi du formulaire (Sécurisé via Fetch)
+        async function sendForm(e) {
+            e.preventDefault();
+            const btn = document.getElementById('form-btn');
+            const form = document.getElementById('main-form');
+            const success = document.getElementById('success-msg');
+            
+            // Sécurité : Vérifier le Honeypot
+            if(form._honey.value !== "") return;
+
+            btn.disabled = true;
+            btn.innerText = "ENVOI EN COURS...";
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                // REMPLACE CETTE URL PAR TON WEBHOOK MAKE.COM
+                await fetch('https://hook.eu2.make.com/blzigtyw08gie4q94gt6xqiv2ank52sa', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                    mode: 'no-cors' // Évite les erreurs CORS sur certains navigateurs
+                });
+                
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+            } catch (err) {
+                alert("Erreur lors de l'envoi. Contactez-nous par téléphone.");
+                btn.disabled = false;
+                btn.innerText = "RÉESSAYER";
+            }
+        }
+    </script>
+</body>
+</html>
