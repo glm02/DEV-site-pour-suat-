@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCR Detailing | Cosmétique Automobile de Luxe à Domicile</title>
+    <title>SCR Detailing | Expert Rénovation & Protection Automobile à Domicile</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,6 +33,8 @@
         .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .cart-sticky { position: sticky; bottom: 24px; z-index: 50; }
         input[type="checkbox"]:checked + label { border-color: #2563eb; background: rgba(37, 99, 235, 0.05); }
+        /* Nouvelle image de fond plus sombre et abstraite */
+        .hero-bg { background-image: url('https://images.unsplash.com/photo-1632686241885-289c63118472?q=80&w=2070&auto=format&fit=crop'); }
     </style>
 </head>
 <body class="antialiased font-sans">
@@ -47,9 +49,10 @@
                 <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-black text-black text-xs shadow-lg">SCR</div>
                 <span class="font-bold text-xl tracking-tighter uppercase">Detailing<span class="text-brand-accent">.</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
-                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
-                <a href="#shop" class="hover:text-white transition-colors">Nos Tarifs</a>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#philosophie" class="hover:text-white transition-colors">A propos</a>
+                <a href="#realisations" class="hover:text-white transition-colors">Réalisations</a>
+                <a href="#shop" class="hover:text-white transition-colors">Tarifs</a>
                 <a href="#avis" class="hover:text-white transition-colors">Avis</a>
                 <a href="#contact" class="bg-white text-black px-6 py-3 rounded-full hover:bg-brand-accent hover:text-white transition-all">Réserver</a>
             </div>
@@ -57,120 +60,137 @@
         </div>
     </nav>
 
-    <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
-        <div class="absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover" alt="Lavage luxe">
-        </div>
+    <section class="relative min-h-[85vh] flex items-center px-6 overflow-hidden hero-bg bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/70 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/50 z-10"></div>
         
-        <div class="max-w-7xl mx-auto w-full z-20">
-            <div class="max-w-2xl space-y-8">
-                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-gradient">
-                    L'EXCELLENCE<br>AUTOMOBILE<br><span class="text-brand-accent">À VOTRE PORTE.</span>
+        <div class="max-w-7xl mx-auto w-full z-20 py-20">
+            <div class="max-w-3xl space-y-8 animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-white">
+                    SUBLIMEZ VOTRE VÉHICULE<br>
+                    <span class="text-brand-accent">SANS VOUS DÉPLACER.</span>
                 </h1>
-                <p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed">
-                    Plus qu'un simple lavage, nous pratiquons la cosmétique automobile. Un protocole rigoureux pour sublimer et protéger votre investissement, directement chez vous ou à votre bureau.
+                <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                    L'expertise du detailing haut de gamme directement à votre domicile. Nous redonnons à votre voiture son éclat d'origine avec des techniques professionnelles et des produits certifiés.
                 </p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#shop" class="bg-brand-accent text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">Voir le menu des soins</a>
-                    <div class="flex items-center gap-3 px-6 py-4 glass rounded-2xl">
-                        <div class="flex -space-x-2">
-                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-800"></div>
-                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-700"></div>
-                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-600"></div>
-                        </div>
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">4.9/5 par nos clients</span>
-                    </div>
+                <div class="flex flex-wrap gap-4 pt-6">
+                    <a href="#shop" class="bg-brand-accent text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all shadow-lg shadow-brand-accent/20">Voir nos formules</a>
+                    <a href="#realisations" class="px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs glass hover:bg-white hover:text-black transition-all">Nos résultats en photos</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="expertise" class="py-32 max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-            <div class="space-y-10">
+    <section id="philosophie" class="py-24 max-w-7xl mx-auto px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+            <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Notre Approche</h2>
+            <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Bien plus qu'un simple lavage.</h3>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Chez SCR Detailing, nous considérons l'entretien automobile comme un art. Un lavage classique en station raye votre carrosserie (les fameuses micro-rayures tourbillonnantes) et n'offre qu'une propreté superficielle.
+            </p>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Notre mission est différente : nous pratiquons la <strong>cosmétique automobile</strong>. Nous utilisons des techniques manuelles douces, des pinceaux de précision pour les zones inaccessibles, et des injecteurs-extracteurs pour purifier les tissus en profondeur. Nous ne nous contentons pas de nettoyer, nous rénovons et protégeons votre investissement contre le temps et les éléments. Le tout, avec le confort absolu d'un service à domicile.
+            </p>
+        </div>
+    </section>
+
+    <section id="realisations" class="py-32 bg-brand-surface">
+        <div class="max-w-7xl mx-auto px-6 space-y-16">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
                 <div class="space-y-4">
-                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Notre Savoir-Faire</h2>
-                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">Pourquoi choisir <br>le Detailing ?</h3>
+                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Portfolio</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Nos Derniers Travaux.</h3>
                 </div>
-                <div class="space-y-6 text-gray-400 leading-relaxed">
-                    <p>
-                        Le detailing est un processus méticuleux de nettoyage, de restauration et de finition d'un véhicule, tant à l'intérieur qu'à l'extérieur, pour produire un niveau de détail de qualité supérieure. Contrairement au lavage classique, nous utilisons des pinceaux de précision, des injecteurs-extracteurs et des produits pH neutre.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-                        <div class="space-y-3">
-                            <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center">
-                                <i class="fa-solid fa-microchip text-brand-accent"></i>
-                            </div>
-                            <h4 class="text-white font-bold uppercase text-sm">Technologie Vapeur</h4>
-                            <p class="text-xs">Désinfection totale sans produits chimiques agressifs pour vos cuirs et textiles.</p>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center">
-                                <i class="fa-solid fa-droplet text-brand-accent"></i>
-                            </div>
-                            <h4 class="text-white font-bold uppercase text-sm">Protection hydrophobe</h4>
-                            <p class="text-xs">Application de cires protectrices pour faciliter vos futurs lavages.</p>
-                        </div>
+                <p class="text-gray-400 max-w-md text-right md:self-end">Découvrez le niveau de finition que nous apportons à chaque véhicule.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass rounded-[2.5rem] overflow-hidden group relative h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1600706432091-a545851dfbd6?q=80&w=1974&auto=format&fit=crop" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" alt="Rénovation Intérieur Cuir">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 p-8 z-20">
+                        <h4 class="text-2xl font-bold uppercase text-white mb-2">Rénovation Intérieur Cuir</h4>
+                        <p class="text-gray-300 text-sm">Nettoyage en profondeur, dégraissage et soin nourrissant sur sellerie Porsche.</p>
                     </div>
                 </div>
-            </div>
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-brand-accent/20 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2070&auto=format&fit=crop" class="relative rounded-[3rem] border border-white/10 shadow-2xl" alt="Travail de précision">
+                <div class="glass rounded-[2.5rem] overflow-hidden group relative h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=2069&auto=format&fit=crop" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" alt="Correction & Protection Carrosserie">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 p-8 z-20">
+                        <h4 class="text-2xl font-bold uppercase text-white mb-2">Miroir Effect</h4>
+                        <p class="text-gray-300 text-sm">Lavage détaillé et pose d'une cire hydrophobe pour une brillance extrême sur peinture noire.</p>
+                    </div>
+                </div>
+                <div class="glass rounded-[2.5rem] overflow-hidden group relative h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1586335971315-891410f24df7?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" alt="Shampouinage Moquettes">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 p-8 z-20">
+                        <h4 class="text-2xl font-bold uppercase text-white mb-2">Shampouinage Extrême</h4>
+                        <p class="text-gray-300 text-sm">Extraction des tâches incrustées et désinfection des moquettes par injection-extraction.</p>
+                    </div>
+                </div>
+                <div class="glass rounded-[2.5rem] overflow-hidden group relative h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1635773133296-43044d51032e?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" alt="Dressing Moteur">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 p-8 z-20">
+                        <h4 class="text-2xl font-bold uppercase text-white mb-2">Detailing Moteur</h4>
+                        <p class="text-gray-300 text-sm">Dégraissage minutieux et application d'un dressing protecteur sur les plastiques moteur.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="shop" class="py-32 bg-brand-black/50">
+    <section id="shop" class="py-32 bg-brand-black">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20 space-y-4">
-                <h2 class="text-5xl font-black uppercase tracking-tighter">Nos Formules</h2>
-                <p class="text-gray-500 max-w-xl mx-auto">Choisissez une base, personnalisez avec vos options. Le prix s'ajuste instantanément.</p>
+                <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Nos Services</h2>
+                <h3 class="text-5xl font-black uppercase tracking-tighter">Formules Tout-Inclus.</h3>
+                <p class="text-gray-500 max-w-xl mx-auto pt-4">Tarifs transparents, déplacement compris. Choisissez votre niveau de finition.</p>
                 
                 <div class="flex flex-wrap justify-center gap-6 pt-10">
-                    <label class="flex items-center gap-3 cursor-pointer group">
+                    <label class="flex items-center gap-3 cursor-pointer group glass px-6 py-3 rounded-full hover:border-brand-accent/50 transition-all">
                         <input type="checkbox" id="add-suv" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
-                        <span class="text-gray-400 group-hover:text-white font-bold text-xs uppercase tracking-widest">SUV / 4x4 (+15€)</span>
+                        <span class="text-gray-300 font-bold text-xs uppercase tracking-widest">SUV / Grand Véhicule (+15€)</span>
                     </label>
-                    <label class="flex items-center gap-3 cursor-pointer group">
+                    <label class="flex items-center gap-3 cursor-pointer group glass px-6 py-3 rounded-full hover:border-brand-accent/50 transition-all">
                         <input type="checkbox" id="add-hair" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
-                        <span class="text-gray-400 group-hover:text-white font-bold text-xs uppercase tracking-widest">Poils d'animaux (+20€)</span>
+                        <span class="text-gray-300 font-bold text-xs uppercase tracking-widest">Poils d'animaux (+20€)</span>
                     </label>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div class="glass p-10 rounded-[3rem] flex flex-col border border-white/5 hover:border-brand-accent/30 transition-all group">
+                <div class="glass p-10 rounded-[3rem] flex flex-col border border-white/5 hover:border-brand-accent/30 transition-all group bg-brand-surface">
                     <div class="mb-10">
                         <div class="flex justify-between items-start mb-6">
                             <h3 class="text-3xl font-black uppercase">Pack Gold</h3>
                             <div class="text-4xl font-black tracking-tighter">50€</div>
                         </div>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Lavage d'entretien méticuleux. Idéal pour les véhicules peu sales nécessitant un rafraîchissement showroom.</p>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Lavage d'entretien méticuleux. Idéal pour un véhicule régulièrement entretenu qui a besoin d'un coup d'éclat.</p>
                         <ul class="space-y-4 text-sm font-medium">
-                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Aspiration habitacle & coffre</li>
-                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage des surfaces (pinceaux)</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Aspiration complète (habitacle & coffre)</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Dépoussiérage minutieux (pinceaux)</li>
                             <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage des vitres (sans traces)</li>
-                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Parfum d'ambiance luxe</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Dressing pneus & parfum habitacle</li>
                         </ul>
                     </div>
                     <button onclick="selectBase('Gold', 50)" class="mt-auto w-full py-5 bg-white text-black font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-brand-accent hover:text-white transition-all">Choisir ce pack</button>
                 </div>
 
-                <div class="relative glass p-10 rounded-[3rem] flex flex-col border border-brand-accent/20 bg-gradient-to-br from-brand-accent/5 to-transparent">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[10px] font-black px-6 py-1.5 rounded-full tracking-tighter uppercase">Recommandé</div>
+                <div class="relative glass p-10 rounded-[3rem] flex flex-col border border-brand-accent/30 bg-gradient-to-br from-brand-accent/10 to-brand-surface">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[10px] font-black px-6 py-1.5 rounded-full tracking-tighter uppercase shadow-lg shadow-brand-accent/20">Best-Seller</div>
                     <div class="mb-10">
                         <div class="flex justify-between items-start mb-6">
                             <h3 class="text-3xl font-black uppercase text-brand-accent">Pack Platinum</h3>
                             <div class="text-4xl font-black tracking-tighter">100€</div>
                         </div>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-8">Rénovation profonde de l'habitacle. Nous traitons les taches, les odeurs et l'encrassement incrusté.</p>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-8">La rénovation complète. Nous traitons les taches incrustées, les odeurs et redonnons vie aux plastiques.</p>
                         <ul class="space-y-4 text-sm font-medium">
-                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Tout le pack Gold inclus</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> <span class="font-bold">Tout le pack Gold inclus</span></li>
                             <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Shampouinage sièges (Injection/Extraction)</li>
-                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage complet des moquettes</li>
-                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Décontamination des plastiques</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage profond des moquettes</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Décontamination & protection plastiques</li>
                         </ul>
                     </div>
                     <button onclick="selectBase('Platinum', 100)" class="mt-auto w-full py-5 bg-brand-accent text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-xl shadow-brand-accent/20 hover:scale-[1.02] transition-all">Choisir ce pack</button>
@@ -179,75 +199,81 @@
         </div>
     </section>
 
-    <section id="avis" class="py-32 bg-brand-black">
+    <section id="avis" class="py-32 bg-brand-surface border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div class="space-y-4">
-                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Avis Clients</h2>
-                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Ils nous font <br>confiance.</h3>
+                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Témoignages</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">L'avis de nos clients.</h3>
                 </div>
                 <div class="text-right">
-                    <div class="text-4xl font-black">4.9/5</div>
-                    <div class="flex gap-1 justify-end text-brand-accent">
+                    <div class="text-4xl font-black text-white">4.9/5</div>
+                    <div class="flex gap-1 justify-end text-brand-accent mt-2">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
+                    <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Basé sur +50 interventions</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-[2.5rem] space-y-6">
+                <div class="glass p-8 rounded-[2.5rem] space-y-6 bg-brand-black">
                     <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-400 italic text-sm">"Service incroyable. Rafael est venu à mon bureau, j'ai retrouvé ma BMW comme si elle sortait de concession. Le pack Platinum est magique pour les sièges en tissu."</p>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">"Bluffé par le résultat. J'allais vendre ma voiture, elle paraît neuve maintenant. Le shampouinage des sièges a fait des miracles."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">JD</div>
-                        <div><p class="font-bold text-xs uppercase">Julien D.</p><p class="text-[10px] text-gray-600">BMW Série 3</p></div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">TR</div>
+                        <div><p class="font-bold text-xs uppercase">Thomas R.</p><p class="text-[10px] text-gray-600">Volkswagen Golf 7</p></div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-[2.5rem] space-y-6 border-brand-accent/20">
+                <div class="glass p-8 rounded-[2.5rem] space-y-6 bg-brand-black border-brand-accent/20">
                     <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-400 italic text-sm">"Plus de poils de chien dans mon Range Rover, j'ai cru que c'était impossible. Travail minutieux et ponctuel. Je recommande vivement !"</p>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">"Quel confort de ne pas avoir à se déplacer ! Intervenant très pro, ponctuel et méticuleux. Je reprendrai RDV pour la protection céramique."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">ML</div>
-                        <div><p class="font-bold text-xs uppercase">Marie L.</p><p class="text-[10px] text-gray-600">Range Rover Evoque</p></div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">SF</div>
+                        <div><p class="font-bold text-xs uppercase">Sophie F.</p><p class="text-[10px] text-gray-600">Audi Q3</p></div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-[2.5rem] space-y-6">
+                <div class="glass p-8 rounded-[2.5rem] space-y-6 bg-brand-black">
                     <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-400 italic text-sm">"Une attention aux détails qu'on ne trouve nulle part ailleurs. Même les grilles d'aération étaient comme neuves. Un vrai passionné."</p>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">"J'ai pris la formule Platinum pour une voiture pleine de poils de chien et de sable. Résultat impeccable, plus aucune trace ni odeur."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">KP</div>
-                        <div><p class="font-bold text-xs uppercase">Kevin P.</p><p class="text-[10px] text-gray-600">Audi A5</p></div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">MB</div>
+                        <div><p class="font-bold text-xs uppercase">Marc B.</p><p class="text-[10px] text-gray-600">Peugeot 3008</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="checkout-bar" class="cart-sticky max-w-4xl mx-auto px-6 hidden">
-        <div class="glass rounded-[2rem] p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-accent/30 bg-black/80">
-            <div class="flex items-center gap-6">
+    <div id="checkout-bar" class="cart-sticky max-w-4xl mx-auto px-6 hidden animate-fade-in-up">
+        <div class="glass rounded-[2rem] p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-accent/30 bg-black/90 backdrop-blur-xl">
+            <div class="flex items-center gap-8">
                 <div>
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Estimation</span>
-                    <div class="text-3xl font-black text-white" id="final-price">0€</div>
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Total Estimé</span>
+                    <div class="text-3xl font-black text-white transition-all" id="final-price">0€</div>
                 </div>
                 <div class="h-10 w-px bg-white/10 hidden md:block"></div>
                 <div class="hidden md:block">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Pack choisi</span>
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Formule</span>
                     <div class="text-sm font-bold uppercase text-brand-accent" id="chosen-pack">-</div>
                 </div>
             </div>
             
             <div class="flex items-center gap-4 w-full md:w-auto">
-                <a href="#contact" class="w-full md:w-auto bg-brand-accent text-white px-10 py-4 rounded-2xl font-black uppercase text-xs text-center shadow-lg shadow-brand-accent/30 hover:bg-blue-600 transition-all">Valider & Réserver</a>
+                <a href="#contact" class="w-full md:w-auto bg-brand-accent text-white px-10 py-4 rounded-2xl font-black uppercase text-xs text-center shadow-lg shadow-brand-accent/30 hover:bg-blue-600 hover:scale-105 transition-all">Valider & Choisir mon créneau</a>
             </div>
         </div>
     </div>
 
-    <section id="contact" class="py-32 bg-brand-black">
+    <section id="contact" class="py-32 bg-brand-black border-t border-white/5">
         <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
-            <h2 class="text-4xl font-black uppercase tracking-tighter">Votre créneau de soins</h2>
-            <div class="glass p-1 rounded-[3rem]">
-                <div class="bg-brand-surface rounded-[2.8rem] p-6">
+            <div>
+                <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-4">Agenda en ligne</h2>
+                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Réservez votre intervention.</h2>
+                <p class="text-gray-500 mt-4">Sélectionnez le créneau qui vous convient. Nous confirmons instantanément.</p>
+            </div>
+            
+            <div class="glass p-2 rounded-[3rem] bg-brand-surface/50">
+                <div class="bg-brand-surface rounded-[2.5rem] overflow-hidden relative">
                     <div class="calendly-inline-widget" data-url="https://calendly.com/VOTRE_LIEN_ICI" style="min-width:320px;height:700px;"></div>
                 </div>
             </div>
@@ -261,24 +287,30 @@
                     <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center font-black text-black text-[10px]">SCR</div>
                     <span class="font-bold text-lg uppercase">Detailing</span>
                 </div>
-                <p class="text-gray-500 text-xs leading-relaxed">Expert en cosmétique automobile à domicile. Nous intervenons avec passion pour redonner à votre véhicule son éclat d'origine.</p>
+                <p class="text-gray-500 text-xs leading-relaxed max-w-xs mx-auto md:mx-0">
+                    Le spécialiste du nettoyage et de la rénovation automobile à domicile. Nous apportons le soin d'un atelier professionnel directement chez vous.
+                </p>
             </div>
             <div class="space-y-6">
-                <h4 class="text-white font-bold uppercase text-xs tracking-widest">Navigation</h4>
+                <h4 class="text-white font-bold uppercase text-xs tracking-widest">Liens Rapides</h4>
                 <ul class="text-gray-500 text-xs space-y-4 font-bold uppercase tracking-widest">
-                    <li><a href="#expertise" class="hover:text-white">Expertise</a></li>
-                    <li><a href="#shop" class="hover:text-white">Tarifs</a></li>
-                    <li><a href="#avis" class="hover:text-white">Avis Clients</a></li>
+                    <li><a href="#philosophie" class="hover:text-white transition-colors">Notre Philosophie</a></li>
+                    <li><a href="#realisations" class="hover:text-white transition-colors">Nos Réalisations</a></li>
+                    <li><a href="#shop" class="hover:text-white transition-colors">Tarifs & Formules</a></li>
+                    <li><a href="#avis" class="hover:text-white transition-colors">Témoignages</a></li>
                 </ul>
             </div>
             <div class="space-y-6">
                 <h4 class="text-white font-bold uppercase text-xs tracking-widest">Contact Direct</h4>
-                <p class="text-brand-accent font-black text-xl">07 49 50 71 40</p>
-                <p class="text-gray-500 text-xs">Instagram: @scr.detailing</p>
+                <a href="tel:0749507140" class="text-brand-accent font-black text-2xl block hover:text-white transition-colors">07 49 50 71 40</a>
+                <p class="text-gray-500 text-xs uppercase tracking-widest">Lundi - Samedi : 09h - 19h</p>
+                <div class="pt-4">
+                    <a href="#" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                </div>
             </div>
         </div>
-        <div class="mt-20 text-center text-[10px] text-gray-700 font-bold uppercase tracking-[0.4em]">
-            © 2026 SCR Detailing - Tous droits réservés
+        <div class="mt-20 pt-8 border-t border-white/5 text-center text-[10px] text-gray-700 font-bold uppercase tracking-[0.4em]">
+            © 2026 SCR Detailing - Fait avec passion.
         </div>
     </footer>
 
@@ -292,15 +324,37 @@
             document.getElementById('checkout-bar').classList.remove('hidden');
             document.getElementById('chosen-pack').innerText = name;
             updateTotal();
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            // Petit scroll automatique vers les options pour inciter à l'ajout
+            document.getElementById('shop').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         function updateTotal() {
             let total = cart.base;
             if(document.getElementById('add-suv').checked) total += 15;
             if(document.getElementById('add-hair').checked) total += 20;
-            document.getElementById('final-price').innerText = total + '€';
+            
+            // Animation du prix
+            const priceEl = document.getElementById('final-price');
+            priceEl.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                priceEl.innerText = total + '€';
+                priceEl.style.transform = 'scale(1)';
+            }, 150);
         }
+
+        // Animation d'apparition simple
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 200);
+            });
+        });
     </script>
 </body>
 </html>
