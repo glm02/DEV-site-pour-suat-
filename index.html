@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCR Detailing | Expert Cosmétique & Rénovation Automobile</title>
     
-    <title>SCR Detailing | Cosmétique Automobile & Nettoyage de Luxe à Domicile</title>
-    <meta name="description" content="Redonnez l'éclat du neuf à votre véhicule. Service de detailing premium à domicile.">
-    
-    <meta property="og:title" content="SCR Detailing | L'Excellence à domicile">
-    <meta property="og:image" content="https://images.pexels.com/photos/16505291/pexels-photo-16505291.jpeg">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,9 +14,7 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
-                    colors: {
-                        brand: { black: '#080808', surface: '#121212', accent: '#2563eb', gold: '#D4AF37' }
-                    }
+                    colors: { brand: { black: '#080808', surface: '#121212', accent: '#2563eb', gold: '#D4AF37' } }
                 }
             }
         }
@@ -31,10 +24,8 @@
         body { background-color: #080808; color: #ffffff; cursor: default; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-mask { background: linear-gradient(to bottom, rgba(8,8,8,0.5) 0%, rgba(8,8,8,1) 100%); }
-        
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
         .shiny-card { position: relative; overflow: hidden; }
         .shiny-card::after {
             content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
@@ -42,18 +33,14 @@
             transform: rotate(45deg); transition: 0.5s;
         }
         .shiny-card:hover::after { left: 100%; top: 100%; }
-
-        #live-toast { 
-            position: fixed; bottom: 20px; left: -400px; z-index: 100; transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
+        #live-toast { position: fixed; bottom: 20px; left: -400px; z-index: 100; transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
         #live-toast.active { left: 20px; }
-
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #080808; }
         ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 10px; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased font-sans">
 
     <div id="smart-alert" class="bg-brand-accent text-white text-[10px] font-bold py-3 text-center uppercase tracking-[0.4em] z-[100] relative">
         <span id="alert-text">⭐ LEADER DU DETAILING À DOMICILE - SATISFACTION 100% GARANTIE ⭐</span>
@@ -61,42 +48,37 @@
 
     <nav class="sticky top-0 z-[60] glass border-b border-white/5 transition-all duration-500" id="navbar">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-black text-black text-xs group-hover:bg-brand-accent group-hover:text-white transition-all duration-500 shadow-xl shadow-white/5">SCR</div>
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-black text-black text-xs">SCR</div>
                 <span class="font-bold text-xl tracking-tighter uppercase">Detailing<span class="text-brand-accent">.</span></span>
             </a>
             <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-gray-400">
-                <a href="#expertise" class="hover:text-white transition-colors">Notre Expertise</a>
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
                 <a href="#realisations" class="hover:text-white transition-colors">Réalisations</a>
                 <a href="#shop" class="hover:text-white transition-colors">Menu des Soins</a>
                 <a href="#avis" class="hover:text-white transition-colors">Avis</a>
-                <a href="#contact" class="bg-white text-black px-8 py-3.5 rounded-2xl hover:bg-brand-accent hover:text-white transition-all shadow-lg shadow-white/5">Réserver</a>
+                <a href="#contact" class="bg-white text-black px-8 py-3.5 rounded-2xl hover:bg-brand-accent hover:text-white transition-all shadow-lg">Réserver</a>
             </div>
             <button class="lg:hidden text-white p-2"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
         </div>
     </nav>
 
-    <section class="relative min-h-[95vh] flex items-center px-6 overflow-hidden">
+    <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
         <div class="absolute inset-0 -z-10">
-            <img src="https://images.pexels.com/photos/16505291/pexels-photo-16505291.jpeg" class="w-full h-full object-cover opacity-60" alt="Lavage auto luxe">
+            <img src="https://images.pexels.com/photos/16505291/pexels-photo-16505291.jpeg" class="w-full h-full object-cover opacity-60" alt="Detailing Hero">
             <div class="absolute inset-0 hero-mask"></div>
         </div>
-        
         <div class="max-w-7xl mx-auto w-full z-20">
             <div class="max-w-3xl space-y-10">
                 <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-brand-accent/20">
                     <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent">Disponible maintenant</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent">Intervention Lyon & Périphérie</span>
                 </div>
-                <h1 class="reveal text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] delay-100 uppercase">
-                    L'Art de la<br>Perfection <br><span class="text-brand-accent italic">Automobile.</span>
-                </h1>
-                <p class="reveal text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-xl delay-200">
-                    SCR Detailing apporte le soin haute-couture directement chez vous. Une expertise sans compromis pour les passionnés.
-                </p>
+                <h1 class="reveal text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">L'Art de la<br>Perfection <br><span class="text-brand-accent italic">Automobile.</span></h1>
+                <p class="reveal text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-xl delay-200">Nous redonnons vie à votre habitacle et votre carrosserie avec des protocoles de soins professionnels directement chez vous.</p>
                 <div class="reveal flex flex-wrap gap-6 pt-6 delay-300">
-                    <a href="#shop" class="bg-brand-accent text-white px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] hover:shadow-2xl hover:shadow-brand-accent/40 transition-all">Commencer mon projet</a>
-                    <a href="#realisations" class="px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] glass hover:bg-white hover:text-black transition-all">Le Portfolio</a>
+                    <a href="#shop" class="bg-brand-accent text-white px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] transition-all">Découvrir les packs</a>
+                    <a href="#realisations" class="px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] glass hover:bg-white hover:text-black transition-all">Voir nos travaux</a>
                 </div>
             </div>
         </div>
@@ -107,28 +89,12 @@
             <div class="space-y-12">
                 <div class="reveal space-y-4">
                     <h2 class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px]">Excellence Technique</h2>
-                    <h3 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">Pourquoi nous faire confiance ?</h3>
+                    <h3 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">Un Savoir-Faire<br>Sans Compromis.</h3>
                 </div>
-                <div class="reveal space-y-8 text-gray-400 leading-relaxed delay-100">
-                    <p class="text-lg leading-relaxed">
-                        Chaque véhicule est unique. Nous utilisons des outils de précision et des produits pH neutre pour garantir une sécurité totale pour votre peinture.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex gap-6 group">
-                            <div class="w-14 h-14 bg-brand-surface border border-white/10 rounded-2xl flex items-center justify-center group-hover:border-brand-accent transition-colors shrink-0">
-                                <i class="fa-solid fa-microscope text-brand-accent"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold uppercase text-sm mb-1">Analyse de surface</h4>
-                                <p class="text-xs">Nous mesurons l'état de votre vernis avant toute intervention.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-gray-400 text-lg reveal delay-100">Le detailing est bien plus qu'un simple lavage. C'est une décontamination totale et une protection durable pour votre vernis et vos textiles.</p>
             </div>
             <div class="reveal relative delay-200">
-                <div class="absolute -inset-10 bg-brand-accent/20 blur-[100px] opacity-20"></div>
-                <img src="https://images.pexels.com/photos/17045050/pexels-photo-17045050.jpeg" class="relative rounded-[3rem] border border-white/10 shadow-3xl" alt="Analyse Detailing">
+                <img src="https://images.pexels.com/photos/17045050/pexels-photo-17045050.jpeg" class="relative rounded-[3rem] border border-white/10 shadow-3xl" alt="Soin carrosserie">
             </div>
         </div>
     </section>
@@ -136,25 +102,24 @@
     <section id="realisations" class="py-32 bg-brand-surface/30">
         <div class="max-w-7xl mx-auto px-6">
             <div class="reveal text-center mb-20 space-y-4">
-                <h2 class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px]">Réalisations</h2>
-                <h3 class="text-5xl font-black uppercase tracking-tighter">Nos travaux récents.</h3>
+                <h2 class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px]">Portfolio</h2>
+                <h3 class="text-5xl font-black uppercase tracking-tighter">Nos Réalisations.</h3>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="reveal shiny-card rounded-[3rem] overflow-hidden group h-[500px] border border-white/5">
+                <div class="reveal shiny-card rounded-[3rem] overflow-hidden group h-[500px]">
                     <img src="https://images.pexels.com/photos/6872582/pexels-photo-6872582.jpeg" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                     <div class="absolute bottom-10 left-10 right-10 p-8 glass rounded-[2rem]">
-                        <span class="text-[10px] font-bold text-brand-accent uppercase tracking-[0.3em] mb-2 block text-center">Intérieur</span>
-                        <h4 class="text-2xl font-black uppercase text-center tracking-tighter">Soin des cuirs & plastiques</h4>
+                        <span class="text-[10px] font-bold text-brand-accent uppercase tracking-[0.3em] mb-2 block text-center">Soin Intérieur</span>
+                        <h4 class="text-2xl font-black uppercase text-center tracking-tighter">Rénovation Habitacle & Cuirs</h4>
                     </div>
                 </div>
-                <div class="reveal shiny-card rounded-[3rem] overflow-hidden group h-[500px] border border-white/5 delay-100">
+                <div class="reveal shiny-card rounded-[3rem] overflow-hidden group h-[500px] delay-100">
                     <img src="https://images.pexels.com/photos/20856507/pexels-photo-20856507.jpeg" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                     <div class="absolute bottom-10 left-10 right-10 p-8 glass rounded-[2rem]">
-                        <span class="text-[10px] font-bold text-brand-accent uppercase tracking-[0.3em] mb-2 block text-center">Extérieur</span>
-                        <h4 class="text-2xl font-black uppercase text-center tracking-tighter">Décontamination & Brillance</h4>
+                        <span class="text-[10px] font-bold text-brand-accent uppercase tracking-[0.3em] mb-2 block text-center">Soin Roues</span>
+                        <h4 class="text-2xl font-black uppercase text-center tracking-tighter">Décontamination Jantes & Arches</h4>
                     </div>
                 </div>
             </div>
@@ -164,17 +129,17 @@
     <section id="shop" class="py-32 bg-brand-black">
         <div class="max-w-7xl mx-auto px-6">
             <div class="reveal text-center mb-24 space-y-4">
-                <h2 class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px]">Menu</h2>
-                <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter">Choisissez votre pack.</h3>
+                <h2 class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px]">Les Formules</h2>
+                <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">Détails des Soins.</h3>
                 
                 <div class="flex flex-wrap justify-center gap-6 pt-12">
                     <label class="flex items-center gap-3 cursor-pointer group glass px-8 py-4 rounded-3xl hover:border-brand-accent/50 transition-all">
                         <input type="checkbox" id="add-suv" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
-                        <span class="text-gray-300 font-bold text-[11px] uppercase tracking-widest">SUV / Grand Format (+15€)</span>
+                        <span class="text-gray-300 font-bold text-[11px] uppercase tracking-widest">SUV / 4x4 / Berline (+15€)</span>
                     </label>
                     <label class="flex items-center gap-3 cursor-pointer group glass px-8 py-4 rounded-3xl hover:border-brand-accent/50 transition-all">
                         <input type="checkbox" id="add-hair" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
-                        <span class="text-gray-300 font-bold text-[11px] uppercase tracking-widest">Poils Animaux (+20€)</span>
+                        <span class="text-gray-300 font-bold text-[11px] uppercase tracking-widest">Poils d'animaux (+20€)</span>
                     </label>
                 </div>
             </div>
@@ -183,29 +148,43 @@
                 <div class="reveal shiny-card glass p-12 rounded-[4rem] flex flex-col hover:border-white/20 transition-all group bg-brand-surface/40">
                     <div class="mb-12">
                         <div class="flex justify-between items-start mb-8">
-                            <h3 class="text-3xl font-black uppercase mb-1">Pack Gold</h3>
+                            <div>
+                                <h3 class="text-3xl font-black uppercase mb-1">Pack Gold</h3>
+                                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Entretien Cosmétique Habitacle</p>
+                            </div>
                             <div class="text-5xl font-black tracking-tighter">50€</div>
                         </div>
-                        <ul class="space-y-4 text-sm text-gray-400">
-                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Aspiration chirurgicale</li>
-                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Pinceaux zones sensibles</li>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-10">Une remise au propre méticuleuse pour retrouver un intérieur sain et impeccable.</p>
+                        <ul class="space-y-4 text-[13px] font-medium text-gray-300">
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Aspiration chirurgicale (habitacle & coffre)</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage des plastiques au pinceau (détails)</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage des vitrages HD (sans traces)</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Dépoussiérage des conduits d'aération</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Dressing pneus & parfum luxe offert</li>
                         </ul>
                     </div>
-                    <button onclick="selectBase('Gold', 50)" class="mt-auto w-full py-6 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-3xl hover:bg-brand-accent hover:text-white transition-all">Sélectionner Gold</button>
+                    <button onclick="selectBase('Gold', 50)" class="mt-auto w-full py-6 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-3xl hover:bg-brand-accent hover:text-white transition-all">Ajouter au panier</button>
                 </div>
 
-                <div class="reveal shiny-card p-12 rounded-[4rem] border border-brand-accent/30 bg-gradient-to-br from-brand-accent/10 to-transparent flex flex-col delay-100 shadow-3xl shadow-brand-accent/5">
+                <div class="reveal shiny-card p-12 rounded-[4rem] border border-brand-accent/30 bg-gradient-to-br from-brand-accent/10 to-transparent flex flex-col delay-100">
                     <div class="mb-12">
                         <div class="flex justify-between items-start mb-8">
-                            <h3 class="text-3xl font-black uppercase mb-1 text-brand-accent">Pack Platinum</h3>
-                            <div class="text-5xl font-black tracking-tighter">100€</div>
+                            <div>
+                                <h3 class="text-3xl font-black uppercase mb-1 text-brand-accent">Pack Platinum</h3>
+                                <p class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Rénovation Profonde Habitacle</p>
+                            </div>
+                            <div class="text-5xl font-black tracking-tighter text-white">100€</div>
                         </div>
-                        <ul class="space-y-4 text-sm text-white">
-                            <li><i class="fa-solid fa-bolt text-brand-accent mr-3"></i>Tout le pack Gold +</li>
-                            <li><i class="fa-solid fa-bolt text-brand-accent mr-3"></i>Injection / Extraction</li>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-10">Le traitement ultime pour les véhicules ayant besoin d'une véritable restauration intérieure.</p>
+                        <ul class="space-y-4 text-[13px] font-medium text-white">
+                            <li class="font-bold italic text-brand-accent"><i class="fa-solid fa-bolt mr-3"></i>Tout le contenu du Pack GOLD +</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Shampouinage des sièges (Injection/Extraction)</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage profond des moquettes et tapis</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Nettoyage des contours de portes et seuils</li>
+                            <li><i class="fa-solid fa-check text-brand-accent mr-3"></i>Traitement antibactérien & odeurs (Vapeur)</li>
                         </ul>
                     </div>
-                    <button onclick="selectBase('Platinum', 100)" class="mt-auto w-full py-6 bg-brand-accent text-white font-black uppercase tracking-widest text-[11px] rounded-3xl shadow-xl shadow-brand-accent/20 hover:scale-[1.02] transition-all">Sélectionner Platinum</button>
+                    <button onclick="selectBase('Platinum', 100)" class="mt-auto w-full py-6 bg-brand-accent text-white font-black uppercase tracking-widest text-[11px] rounded-3xl shadow-xl shadow-brand-accent/20 hover:scale-[1.02] transition-all">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -215,25 +194,23 @@
         <div class="glass rounded-[2rem] p-6 shadow-3xl flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-accent/40 bg-black/90 backdrop-blur-3xl">
             <div class="flex items-center gap-6">
                 <div>
-                    <span class="text-[9px] uppercase font-bold text-gray-500 tracking-[0.3em]">Estimation</span>
+                    <span class="text-[9px] uppercase font-bold text-gray-500 tracking-[0.3em]">Total</span>
                     <div class="text-3xl font-black text-white" id="final-price">0€</div>
                 </div>
                 <div class="hidden md:block">
-                    <span class="text-[9px] uppercase font-bold text-gray-500 tracking-[0.3em]">Choix</span>
+                    <span class="text-[9px] uppercase font-bold text-gray-500 tracking-[0.3em]">Sélection</span>
                     <div class="text-xs font-black uppercase text-brand-accent" id="chosen-pack">-</div>
                 </div>
             </div>
-            <a href="#contact" class="bg-brand-accent text-white px-10 py-4 rounded-2xl font-black uppercase text-[10px] tracking-widest text-center shadow-lg hover:bg-blue-600 transition-all">Finaliser ma réservation</a>
+            <a href="#contact" class="bg-brand-accent text-white px-10 py-4 rounded-2xl font-black uppercase text-[10px] tracking-widest text-center shadow-lg hover:bg-blue-600 transition-all">Confirmer & Réserver</a>
         </div>
     </div>
 
-    <section id="contact" class="py-40 bg-brand-black border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6 text-center space-y-16">
-            <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-tight">Prenez RDV.</h3>
-            <div class="reveal glass p-2 rounded-[4rem] bg-brand-surface/30 delay-100">
-                <div class="bg-brand-surface rounded-[3.8rem] overflow-hidden">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/VOTRE_LIEN_ICI" style="min-width:320px;height:750px;"></div>
-                </div>
+    <section id="contact" class="py-40 bg-brand-black border-t border-white/5 text-center px-6">
+        <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16">L'Agenda.</h3>
+        <div class="reveal glass p-2 rounded-[4rem] max-w-5xl mx-auto">
+            <div class="bg-brand-surface rounded-[3.8rem] overflow-hidden">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/VOTRE_LIEN_ICI" style="min-width:320px;height:750px;"></div>
             </div>
         </div>
     </section>
@@ -248,19 +225,19 @@
         </div>
     </div>
 
-    <footer class="py-24 border-t border-white/5 bg-brand-black text-center">
-        <p class="text-gray-500 text-[9px] font-bold uppercase tracking-[0.5em]">© 2026 SCR Detailing - Tous droits réservés</p>
+    <footer class="py-24 border-t border-white/5 bg-brand-black text-center text-[9px] font-bold text-gray-700 uppercase tracking-[0.5em]">
+        © 2026 SCR Detailing - Tous droits réservés
     </footer>
 
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script>
-        // Animations au scroll
+        // Reveal Logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Panier / Calculateur
+        // Cart Logic
         let cart = { base: 0, name: '-' };
         function selectBase(name, price) {
             cart.base = price; cart.name = name;
@@ -275,13 +252,8 @@
             document.getElementById('final-price').innerText = total + '€';
         }
 
-        // Alerte Intelligente selon l'heure
-        const alertText = document.getElementById('alert-text');
-        const hour = new Date().getHours();
-        if(hour > 18 || hour < 8) alertText.innerText = "🌙 SESSION DE NUIT ? RÉSERVEZ VOTRE CRÉNEAU POUR DEMAIN MATIN !";
-
-        // Toast de preuve sociale
-        const users = ["Julien (Lyon)", "Sarah (Ecully)", "Marc (Villeurbanne)", "Kevin (Bron)"];
+        // Live Toast
+        const users = ["Mickaël (Lyon)", "Amandine (Ecully)", "Stéphane (Tassin)", "Julie (Bron)"];
         const toast = document.getElementById('live-toast');
         function showToast() {
             document.getElementById('toast-user').innerText = users[Math.floor(Math.random() * users.length)];
@@ -290,11 +262,9 @@
         }
         setInterval(showToast, 12000);
 
-        // Header Style Scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            nav.style.background = window.scrollY > 100 ? 'rgba(8, 8, 8, 0.95)' : 'rgba(255, 255, 255, 0.02)';
-        });
+        // Weather Alert
+        const hour = new Date().getHours();
+        if(hour > 18 || hour < 8) document.getElementById('alert-text').innerText = "🌙 SESSION DE NUIT ? NOS PROJECTEURS LED PERMETTENT UN TRAVAIL DE PRÉCISION 24/24 !";
     </script>
 </body>
 </html>
