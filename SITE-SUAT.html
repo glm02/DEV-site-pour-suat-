@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavage Auto Pro - Service Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- STYLE GÉNÉRAL --- */
+        :root {
+            --primary: #007bff;
+            --secondary: #2c3e50;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --accent: #00d4ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        html { scroll-behavior: smooth; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--secondary); font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* --- SECTION ACCUEIL --- */
+        #accueil {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        #accueil h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        #accueil p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); transform: translateY(-3px); }
+
+        /* --- SERVICES --- */
+        section { padding: 100px 10% 60px; }
+        h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--secondary); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* --- TARIFS --- */
+        #tarifs { background: #eef2f7; }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .price-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        .price-card.featured { border-color: var(--primary); position: relative; }
+        .price-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .price-card .price { font-size: 3rem; font-weight: bold; color: var(--primary); margin-bottom: 20px; }
+        .price-card ul { list-style: none; margin-bottom: 30px; }
+        .price-card ul li { padding: 10px 0; border-bottom: 1px solid #eee; }
+
+        /* --- AVIS --- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .review-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            border-left: 5px solid var(--primary);
+        }
+        .review-card p { margin-bottom: 15px; }
+        .stars { color: #f1c40f; }
+
+        /* --- RÉSERVATION --- */
+        #reservation { background: white; text-align: center; }
+        .booking-container { max-width: 800px; margin: 0 auto; }
+
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 50px 10% 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            #accueil h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">✨ LavageAutoPro</div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#avis">Avis</a></li>
+            <li><a href="#reservation" class="btn" style="color:white; padding: 10px 20px;">Réserver</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil">
+        <h1>Un Lavage d'Excellence</h1>
+        <p>Nous redonnons à votre véhicule son éclat d'origine avec des produits respectueux de l'environnement.</p>
+        <a href="#reservation" class="btn">Prendre RDV maintenant</a>
+    </section>
+
+    <section id="services">
+        <h2>Nos Prestations</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-car"></i>
+                <h3>Nettoyage Extérieur</h3>
+                <p>Prélavage, lavage à la main, séchage microfibre et protection cire.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-couch"></i>
+                <h3>Nettoyage Intérieur</h3>
+                <p>Aspiration complète, pressing des sièges et nettoyage plastiques.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-sparkles"></i>
+                <h3>Rénovation Phares</h3>
+                <p>Retrouvez une visibilité parfaite et un aspect neuf pour vos optiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs">
+        <h2>Nos Tarifs</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Lavage Express</h3>
+                <div class="price">25€</div>
+                <ul>
+                    <li>Lavage Extérieur</li>
+                    <li>Séchage main</li>
+                    <li>Nettoyage vitres</li>
+                    <li>20 min de prestation</li>
+                </ul>
+                <a href="#reservation" class="btn">Choisir</a>
+            </div>
+            <div class="price-card featured">
+                <h3>Lavage Intégral</h3>
+                <div class="price">55€</div>
+                <ul>
+                    <li>Lavage Extérieur</li>
+                    <li>Aspiration Habitacle</li>
+                    <li>Dépoussiérage plastiques</li>
+                    <li>Parfums d'ambiance</li>
+                </ul>
+                <a href="#reservation" class="btn">Choisis par 80% des clients</a>
+            </div>
+            <div class="price-card">
+                <h3>Lavage Prestige</h3>
+                <div class="price">95€</div>
+                <ul>
+                    <li>Lavage Intégral +</li>
+                    <li>Shampoing sièges ou cuir</li>
+                    <li>Dégoudronnage carrosserie</li>
+                    <li>Brillance pneus</li>
+                </ul>
+                <a href="#reservation" class="btn">Choisir</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="avis">
+        <h2>Ce que disent nos clients</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Travail incroyable, ma voiture est comme neuve. Le nettoyage intérieur est impeccable !"</p>
+                <strong>- Jean D.</strong>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Prise de rendez-vous simple et rapide. Très professionnel, je recommande."</p>
+                <strong>- Sarah M.</strong>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★☆</div>
+                <p>"Super service pour le prix. Les jantes brillent vraiment !"</p>
+                <strong>- Marc L.</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation">
+        <h2>Prendre Rendez-vous</h2>
+        <p style="margin-bottom: 30px;">Choisissez votre créneau ci-dessous :</p>
+        <div class="booking-container">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/TON_AMI_Lien" style="min-width:320px;height:630px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+    </section>
+
+    <footer>
+        <p>✨ LavageAutoPro - 2026</p>
+        <p>123 Avenue de l'Automobile, 75000 Paris</p>
+        <p>Tél : 01 02 03 04 05</p>
+    </footer>
+
+</body>
+</html>
