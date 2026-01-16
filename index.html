@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCR Detailing | Boutique de Soins Automobiles</title>
+    <title>SCR Detailing | Cosmétique Automobile de Luxe à Domicile</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -19,7 +19,7 @@
                             black: '#080808',
                             surface: '#121212',
                             accent: '#2563eb',
-                            sale: '#ef4444'
+                            gold: '#D4AF37'
                         }
                     }
                 }
@@ -29,257 +29,278 @@
 
     <style>
         body { background-color: #080808; color: #ffffff; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .promo-gradient { background: linear-gradient(90deg, #2563eb, #9333ea); }
-        .cart-sticky { position: sticky; bottom: 20px; z-index: 40; }
-        input[type="checkbox"]:checked + label { border-color: #2563eb; background: rgba(37, 99, 235, 0.1); }
-        .shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); background-size: 200% 100%; animation: shimmer 2s infinite; }
-        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cart-sticky { position: sticky; bottom: 24px; z-index: 50; }
+        input[type="checkbox"]:checked + label { border-color: #2563eb; background: rgba(37, 99, 235, 0.05); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased font-sans">
 
-    <div class="promo-gradient text-white text-[11px] font-bold py-2 text-center uppercase tracking-[0.2em]">
-        🔥 OFFRE DE LANCEMENT : -10% AVEC LE CODE <span class="bg-white text-brand-accent px-2 py-0.5 rounded ml-1">SCR10</span>
+    <div class="bg-brand-accent text-white text-[10px] font-bold py-2.5 text-center uppercase tracking-[0.3em]">
+        ✨ Disponible 7j/7 - Déplacement offert dans un rayon de 30km ✨
     </div>
 
-    <nav class="sticky top-0 z-50 glass border-b border-white/5">
+    <nav class="sticky top-0 z-[60] glass border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-black text-black text-xs">SCR</div>
-                <span class="font-bold text-xl tracking-tight uppercase">Detailing<span class="text-brand-accent text-3xl leading-none">.</span></span>
+                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center font-black text-black text-xs shadow-lg">SCR</div>
+                <span class="font-bold text-xl tracking-tighter uppercase">Detailing<span class="text-brand-accent">.</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-400">
-                <a href="#shop" class="hover:text-white transition-colors">Boutique</a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#shop" class="hover:text-white transition-colors">Nos Tarifs</a>
                 <a href="#avis" class="hover:text-white transition-colors">Avis</a>
-                <a href="#booking" class="bg-white text-black px-6 py-2.5 rounded-full hover:scale-105 transition-all">Réserver</a>
+                <a href="#contact" class="bg-white text-black px-6 py-3 rounded-full hover:bg-brand-accent hover:text-white transition-all">Réserver</a>
             </div>
+            <button class="md:hidden text-white"><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
         </div>
     </nav>
 
-    <section class="relative h-[80vh] flex items-center justify-center text-center px-6 overflow-hidden">
+    <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
         <div class="absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1552933529-e359b2477262?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover" alt="Detailing">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover" alt="Lavage luxe">
         </div>
-        <div class="max-w-4xl space-y-6 z-20">
-            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter leading-none">VOTRE VOITURE,<br><span class="text-brand-accent italic">VERSION SHOWROOM.</span></h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light">Le premier service de detailing à domicile conçu comme une expérience e-commerce premium.</p>
-            <div class="pt-8 flex justify-center gap-4">
-                <a href="#shop" class="bg-brand-accent text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-brand-accent/40 transition-all">Découvrir nos Packs</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="shop" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-            <div>
-                <h2 class="text-4xl font-black uppercase tracking-tighter">Choisissez votre base</h2>
-                <p class="text-gray-500 mt-2">Tous nos packs incluent le déplacement à domicile.</p>
-            </div>
-            <div class="flex gap-2">
-                <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-bold uppercase">✨ 124 clients cette semaine</span>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="group relative glass p-1 rounded-[2.5rem] transition-all hover:border-brand-accent/50">
-                <div class="bg-brand-surface rounded-[2.3rem] p-8 h-full space-y-6">
-                    <div class="h-64 rounded-3xl overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Gold Pack">
-                        <div class="absolute top-4 left-4 bg-white text-black text-[10px] font-black px-3 py-1 rounded-full uppercase">Lavage Standard</div>
+        
+        <div class="max-w-7xl mx-auto w-full z-20">
+            <div class="max-w-2xl space-y-8">
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-gradient">
+                    L'EXCELLENCE<br>AUTOMOBILE<br><span class="text-brand-accent">À VOTRE PORTE.</span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed">
+                    Plus qu'un simple lavage, nous pratiquons la cosmétique automobile. Un protocole rigoureux pour sublimer et protéger votre investissement, directement chez vous ou à votre bureau.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#shop" class="bg-brand-accent text-white px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">Voir le menu des soins</a>
+                    <div class="flex items-center gap-3 px-6 py-4 glass rounded-2xl">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-800"></div>
+                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-700"></div>
+                            <div class="w-8 h-8 rounded-full border-2 border-black bg-gray-600"></div>
+                        </div>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">4.9/5 par nos clients</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-3xl font-bold uppercase">Pack Gold</h3>
-                        <div class="text-3xl font-black text-white">50€</div>
-                    </div>
-                    <p class="text-gray-500 text-sm">Le soin essentiel pour un véhicule entretenu. Focus habitacle complet.</p>
-                    <button onclick="selectBase('Gold', 50)" class="w-full py-4 rounded-2xl bg-white text-black font-black uppercase tracking-widest hover:bg-brand-accent hover:text-white transition-all">Sélectionner</button>
-                </div>
-            </div>
-
-            <div class="group relative glass p-1 rounded-[2.5rem] transition-all border-brand-accent/40">
-                <div class="bg-brand-surface rounded-[2.3rem] p-8 h-full space-y-6">
-                    <div class="h-64 rounded-3xl overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Platinum Pack">
-                        <div class="absolute top-4 left-4 bg-brand-accent text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Rénovation Profonde</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-3xl font-bold uppercase text-brand-accent">Pack Platinum</h3>
-                        <div class="text-3xl font-black text-white">100€</div>
-                    </div>
-                    <p class="text-gray-500 text-sm">Shampouinage complet par injection/extraction. Idéal pour voitures très sales.</p>
-                    <button onclick="selectBase('Platinum', 100)" class="w-full py-4 rounded-2xl bg-brand-accent text-white font-black uppercase tracking-widest hover:shadow-lg hover:shadow-brand-accent/30 transition-all">Sélectionner</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-20">
-            <h3 class="text-2xl font-black uppercase mb-8">Personnalisez votre soin (Add-ons)</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="relative">
-                    <input type="checkbox" id="add-suv" class="hidden" onchange="updateTotal()">
-                    <label for="add-suv" class="flex flex-col p-6 glass rounded-3xl cursor-pointer hover:border-white/20 transition-all h-full">
-                        <span class="text-brand-accent font-bold mb-1">+15€</span>
-                        <span class="font-bold uppercase text-sm">SUV / Berline</span>
-                        <span class="text-[10px] text-gray-500 mt-2">Supplément taille véhicule</span>
-                    </label>
-                </div>
-                <div class="relative">
-                    <input type="checkbox" id="add-hair" class="hidden" onchange="updateTotal()">
-                    <label for="add-hair" class="flex flex-col p-6 glass rounded-3xl cursor-pointer hover:border-white/20 transition-all h-full">
-                        <span class="text-brand-accent font-bold mb-1">+20€</span>
-                        <span class="font-bold uppercase text-sm">Poils d'animaux</span>
-                        <span class="text-[10px] text-gray-500 mt-2">Brossage manuel intensif</span>
-                    </label>
-                </div>
-                <div class="relative">
-                    <input type="checkbox" id="add-leather" class="hidden" onchange="updateTotal()">
-                    <label for="add-leather" class="flex flex-col p-6 glass rounded-3xl cursor-pointer hover:border-white/20 transition-all h-full">
-                        <span class="text-brand-accent font-bold mb-1">+30€</span>
-                        <span class="font-bold uppercase text-sm">Soin Cuir</span>
-                        <span class="text-[10px] text-gray-500 mt-2">Nettoyage & Hydratation</span>
-                    </label>
-                </div>
-                <div class="relative">
-                    <input type="checkbox" id="add-headlight" class="hidden" onchange="updateTotal()">
-                    <label for="add-headlight" class="flex flex-col p-6 glass rounded-3xl cursor-pointer hover:border-white/20 transition-all h-full">
-                        <span class="text-brand-accent font-bold mb-1">+45€</span>
-                        <span class="font-bold uppercase text-sm">Optiques Phares</span>
-                        <span class="text-[10px] text-gray-500 mt-2">Polissage & Protection</span>
-                    </label>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="checkout-bar" class="cart-sticky max-w-3xl mx-auto px-6 hidden">
-        <div class="glass rounded-[2rem] p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-accent/30">
-            <div>
-                <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Votre Panier</span>
-                <div class="flex items-baseline gap-2">
-                    <span id="final-price" class="text-3xl font-black text-white">0€</span>
-                    <span id="old-price" class="text-sm text-gray-500 line-through hidden"></span>
+    <section id="expertise" class="py-32 max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <div class="space-y-4">
+                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Notre Savoir-Faire</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">Pourquoi choisir <br>le Detailing ?</h3>
+                </div>
+                <div class="space-y-6 text-gray-400 leading-relaxed">
+                    <p>
+                        Le detailing est un processus méticuleux de nettoyage, de restauration et de finition d'un véhicule, tant à l'intérieur qu'à l'extérieur, pour produire un niveau de détail de qualité supérieure. Contrairement au lavage classique, nous utilisons des pinceaux de précision, des injecteurs-extracteurs et des produits pH neutre.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-microchip text-brand-accent"></i>
+                            </div>
+                            <h4 class="text-white font-bold uppercase text-sm">Technologie Vapeur</h4>
+                            <p class="text-xs">Désinfection totale sans produits chimiques agressifs pour vos cuirs et textiles.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-droplet text-brand-accent"></i>
+                            </div>
+                            <h4 class="text-white font-bold uppercase text-sm">Protection hydrophobe</h4>
+                            <p class="text-xs">Application de cires protectrices pour faciliter vos futurs lavages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-brand-accent/20 blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2070&auto=format&fit=crop" class="relative rounded-[3rem] border border-white/10 shadow-2xl" alt="Travail de précision">
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-32 bg-brand-black/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-5xl font-black uppercase tracking-tighter">Nos Formules</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Choisissez une base, personnalisez avec vos options. Le prix s'ajuste instantanément.</p>
+                
+                <div class="flex flex-wrap justify-center gap-6 pt-10">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" id="add-suv" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
+                        <span class="text-gray-400 group-hover:text-white font-bold text-xs uppercase tracking-widest">SUV / 4x4 (+15€)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" id="add-hair" onchange="updateTotal()" class="w-5 h-5 rounded border-white/10 bg-white/5 text-brand-accent focus:ring-0">
+                        <span class="text-gray-400 group-hover:text-white font-bold text-xs uppercase tracking-widest">Poils d'animaux (+20€)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="glass p-10 rounded-[3rem] flex flex-col border border-white/5 hover:border-brand-accent/30 transition-all group">
+                    <div class="mb-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-3xl font-black uppercase">Pack Gold</h3>
+                            <div class="text-4xl font-black tracking-tighter">50€</div>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Lavage d'entretien méticuleux. Idéal pour les véhicules peu sales nécessitant un rafraîchissement showroom.</p>
+                        <ul class="space-y-4 text-sm font-medium">
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Aspiration habitacle & coffre</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage des surfaces (pinceaux)</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage des vitres (sans traces)</li>
+                            <li class="flex items-center gap-3 text-gray-300"><i class="fa-solid fa-circle-check text-brand-accent"></i> Parfum d'ambiance luxe</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectBase('Gold', 50)" class="mt-auto w-full py-5 bg-white text-black font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-brand-accent hover:text-white transition-all">Choisir ce pack</button>
+                </div>
+
+                <div class="relative glass p-10 rounded-[3rem] flex flex-col border border-brand-accent/20 bg-gradient-to-br from-brand-accent/5 to-transparent">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[10px] font-black px-6 py-1.5 rounded-full tracking-tighter uppercase">Recommandé</div>
+                    <div class="mb-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-3xl font-black uppercase text-brand-accent">Pack Platinum</h3>
+                            <div class="text-4xl font-black tracking-tighter">100€</div>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-8">Rénovation profonde de l'habitacle. Nous traitons les taches, les odeurs et l'encrassement incrusté.</p>
+                        <ul class="space-y-4 text-sm font-medium">
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Tout le pack Gold inclus</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Shampouinage sièges (Injection/Extraction)</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Nettoyage complet des moquettes</li>
+                            <li class="flex items-center gap-3 text-white"><i class="fa-solid fa-circle-check text-brand-accent"></i> Décontamination des plastiques</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectBase('Platinum', 100)" class="mt-auto w-full py-5 bg-brand-accent text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-xl shadow-brand-accent/20 hover:scale-[1.02] transition-all">Choisir ce pack</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avis" class="py-32 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="space-y-4">
+                    <h2 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs">Avis Clients</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Ils nous font <br>confiance.</h3>
+                </div>
+                <div class="text-right">
+                    <div class="text-4xl font-black">4.9/5</div>
+                    <div class="flex gap-1 justify-end text-brand-accent">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-[2.5rem] space-y-6">
+                    <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic text-sm">"Service incroyable. Rafael est venu à mon bureau, j'ai retrouvé ma BMW comme si elle sortait de concession. Le pack Platinum est magique pour les sièges en tissu."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">JD</div>
+                        <div><p class="font-bold text-xs uppercase">Julien D.</p><p class="text-[10px] text-gray-600">BMW Série 3</p></div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] space-y-6 border-brand-accent/20">
+                    <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic text-sm">"Plus de poils de chien dans mon Range Rover, j'ai cru que c'était impossible. Travail minutieux et ponctuel. Je recommande vivement !"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">ML</div>
+                        <div><p class="font-bold text-xs uppercase">Marie L.</p><p class="text-[10px] text-gray-600">Range Rover Evoque</p></div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] space-y-6">
+                    <div class="flex gap-1 text-brand-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic text-sm">"Une attention aux détails qu'on ne trouve nulle part ailleurs. Même les grilles d'aération étaient comme neuves. Un vrai passionné."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-xs">KP</div>
+                        <div><p class="font-bold text-xs uppercase">Kevin P.</p><p class="text-[10px] text-gray-600">Audi A5</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout-bar" class="cart-sticky max-w-4xl mx-auto px-6 hidden">
+        <div class="glass rounded-[2rem] p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-brand-accent/30 bg-black/80">
+            <div class="flex items-center gap-6">
+                <div>
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Estimation</span>
+                    <div class="text-3xl font-black text-white" id="final-price">0€</div>
+                </div>
+                <div class="h-10 w-px bg-white/10 hidden md:block"></div>
+                <div class="hidden md:block">
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Pack choisi</span>
+                    <div class="text-sm font-bold uppercase text-brand-accent" id="chosen-pack">-</div>
                 </div>
             </div>
             
             <div class="flex items-center gap-4 w-full md:w-auto">
-                <input type="text" id="promo-code" placeholder="Code Promo ?" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brand-accent w-full md:w-32">
-                <button onclick="applyPromo()" class="bg-white/10 px-4 py-3 rounded-xl text-[10px] font-bold uppercase hover:bg-white/20">Appliquer</button>
+                <a href="#contact" class="w-full md:w-auto bg-brand-accent text-white px-10 py-4 rounded-2xl font-black uppercase text-xs text-center shadow-lg shadow-brand-accent/30 hover:bg-blue-600 transition-all">Valider & Réserver</a>
             </div>
-
-            <a href="#booking" class="w-full md:w-auto bg-brand-accent text-white px-8 py-4 rounded-2xl font-black uppercase text-sm text-center shadow-lg shadow-brand-accent/30">Réserver</a>
         </div>
     </div>
 
-    <section id="booking" class="py-32 bg-brand-black">
+    <section id="contact" class="py-32 bg-brand-black">
         <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
-            <h2 class="text-4xl font-black uppercase tracking-tighter">Finalisez votre rendez-vous</h2>
-            
-            <div class="glass p-8 rounded-[3rem] space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                    <div class="space-y-2">
-                        <i class="fa-solid fa-shield-halved text-brand-accent text-xl"></i>
-                        <p class="font-bold uppercase">Qualité Pro</p>
-                        <p class="text-gray-500 text-[10px]">Produits certifiés Meguiar's</p>
-                    </div>
-                    <div class="space-y-2">
-                        <i class="fa-solid fa-truck-fast text-brand-accent text-xl"></i>
-                        <p class="font-bold uppercase">À Domicile</p>
-                        <p class="text-gray-500 text-[10px]">On se déplace chez vous</p>
-                    </div>
-                    <div class="space-y-2">
-                        <i class="fa-solid fa-lock text-brand-accent text-xl"></i>
-                        <p class="font-bold uppercase">Paiement Simple</p>
-                        <p class="text-gray-500 text-[10px]">Espèces ou CB sur place</p>
-                    </div>
+            <h2 class="text-4xl font-black uppercase tracking-tighter">Votre créneau de soins</h2>
+            <div class="glass p-1 rounded-[3rem]">
+                <div class="bg-brand-surface rounded-[2.8rem] p-6">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/VOTRE_LIEN_ICI" style="min-width:320px;height:700px;"></div>
                 </div>
-
-                <hr class="border-white/5">
-
-                <div class="calendly-inline-widget" data-url="https://calendly.com/TON_LIEN_ICI" style="min-width:320px;height:580px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 bg-brand-black text-center">
-        <div class="max-w-7xl mx-auto px-6 space-y-8">
-            <div class="flex flex-col items-center gap-4">
-                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center font-black text-black">SCR</div>
-                <div class="flex gap-6 text-gray-500 font-bold uppercase text-[10px] tracking-widest">
-                    <a href="#" class="hover:text-white">Instagram</a>
-                    <a href="#" class="hover:text-white">Contact</a>
-                    <a href="#" class="hover:text-white">Mentions</a>
+    <footer class="py-20 border-t border-white/5 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div class="space-y-6">
+                <div class="flex items-center justify-center md:justify-start gap-3">
+                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center font-black text-black text-[10px]">SCR</div>
+                    <span class="font-bold text-lg uppercase">Detailing</span>
                 </div>
+                <p class="text-gray-500 text-xs leading-relaxed">Expert en cosmétique automobile à domicile. Nous intervenons avec passion pour redonner à votre véhicule son éclat d'origine.</p>
             </div>
-            <p class="text-gray-700 text-[10px] font-medium tracking-[0.3em] uppercase">© 2026 SCR Detailing - Expert en Cosmétique Automobile</p>
+            <div class="space-y-6">
+                <h4 class="text-white font-bold uppercase text-xs tracking-widest">Navigation</h4>
+                <ul class="text-gray-500 text-xs space-y-4 font-bold uppercase tracking-widest">
+                    <li><a href="#expertise" class="hover:text-white">Expertise</a></li>
+                    <li><a href="#shop" class="hover:text-white">Tarifs</a></li>
+                    <li><a href="#avis" class="hover:text-white">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-white font-bold uppercase text-xs tracking-widest">Contact Direct</h4>
+                <p class="text-brand-accent font-black text-xl">07 49 50 71 40</p>
+                <p class="text-gray-500 text-xs">Instagram: @scr.detailing</p>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-[10px] text-gray-700 font-bold uppercase tracking-[0.4em]">
+            © 2026 SCR Detailing - Tous droits réservés
         </div>
     </footer>
 
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script>
-        let cart = {
-            base: 0,
-            baseName: '',
-            addons: [],
-            total: 0,
-            discount: 0
-        };
+        let cart = { base: 0, name: '-' };
 
         function selectBase(name, price) {
             cart.base = price;
-            cart.baseName = name;
+            cart.name = name;
             document.getElementById('checkout-bar').classList.remove('hidden');
+            document.getElementById('chosen-pack').innerText = name;
             updateTotal();
-            // Scroll doux vers les add-ons
-            window.scrollBy({ top: 300, behavior: 'smooth' });
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
         function updateTotal() {
-            let addonsPrice = 0;
-            if(document.getElementById('add-suv').checked) addonsPrice += 15;
-            if(document.getElementById('add-hair').checked) addonsPrice += 20;
-            if(document.getElementById('add-leather').checked) addonsPrice += 30;
-            if(document.getElementById('add-headlight').checked) addonsPrice += 45;
-
-            cart.total = cart.base + addonsPrice;
-            
-            // Appliquer réduction si code actif
-            let finalPrice = cart.total;
-            if(cart.discount > 0) {
-                finalPrice = cart.total * (1 - cart.discount);
-            }
-
-            document.getElementById('final-price').innerText = Math.round(finalPrice) + '€';
-            
-            if(cart.discount > 0) {
-                document.getElementById('old-price').classList.remove('hidden');
-                document.getElementById('old-price').innerText = cart.total + '€';
-            }
+            let total = cart.base;
+            if(document.getElementById('add-suv').checked) total += 15;
+            if(document.getElementById('add-hair').checked) total += 20;
+            document.getElementById('final-price').innerText = total + '€';
         }
-
-        function applyPromo() {
-            const code = document.getElementById('promo-code').value.toUpperCase();
-            if(code === 'SCR10') {
-                cart.discount = 0.10;
-                alert('Code Promo Appliqué ! -10% sur votre commande.');
-                updateTotal();
-            } else {
-                alert('Code invalide.');
-            }
-        }
-
-        // Animation de la barre de nav au scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-2');
-                nav.style.background = "rgba(8, 8, 8, 0.95)";
-            } else {
-                nav.classList.remove('py-2');
-                nav.style.background = "rgba(255, 255, 255, 0.03)";
-            }
-        });
     </script>
 </body>
 </html>
